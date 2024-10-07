@@ -1,0 +1,6 @@
+1. add "start": "node index.js", in script in package.json file
+2. first create vercel.json file in backend
+3. add cors configuration code in backend index.js file
+4. add env file in frontend..
+5. change fetch request url localhost:5000 to ${process.env.REACT_APP_API_URL} in every component
+6. add environment variable in vercel
