@@ -24,7 +24,7 @@ function App() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser) {
   
-      const newSocket = io("http://localhost:5000"); // Backend URL
+      const newSocket = io(process.env.REACT_APP_API_URL); // Backend URL
       setSocket(newSocket);
   
       newSocket.on("connect", () => {

@@ -7,7 +7,13 @@ const port = 5000;
 
 const connectToDatabase = require("./db");
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000','https://chat-application-seven-rho.vercel.app'], 
+  methods: ['GET','PUT','POST','DELETE'],
+  credentials: true,
+}));
+
+// app.use(cors());
 app.use(express.json());
 
 connectToDatabase();
