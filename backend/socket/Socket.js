@@ -5,7 +5,7 @@ const Chat = require("../models/ChatModel");
 const setupSocket = (server) => {
   const io = socketIo(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: "https://chat-application-seven-rho.vercel.app",
       methods: ["GET", "POST"],
       allowedHeaders: ["Content-Type"],
     },
