@@ -5,7 +5,7 @@ const Chat = require("../models/ChatModel");
 const setupSocket = (server) => {
   const io = socketIo(server, {
     cors: {
-      origin: "https://venerable-beijinho-a40570.netlify.app",
+      origin: "http://localhost:3000",
       methods: ["GET", "POST"],
       allowedHeaders: ["Content-Type"],
     },
