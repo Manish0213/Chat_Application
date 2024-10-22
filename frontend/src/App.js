@@ -18,7 +18,7 @@ function App() {
       fetchChatList();
     }
   }, [token]);
-
+  
   // Setup Socket.IO connection
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
