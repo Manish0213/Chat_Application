@@ -7,10 +7,16 @@ const port = 5000;
 
 const connectToDatabase = require("./db");
 
+// app.use(cors({
+//   origin: ['http://localhost:3000','https://chatapp-nine-gray.vercel.app'], 
+//   methods: ['GET','PUT','POST','DELETE'],
+//   credentials: true,
+// }));
+
 app.use(cors({
-  origin: ['http://localhost:3000','https://chatapp-nine-gray.vercel.app'], 
-  methods: ['GET','PUT','POST','DELETE'],
-  credentials: true,
+  origin: 'https://chatapp-nine-gray.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // If you're using cookies
 }));
 
 // app.use(cors());
