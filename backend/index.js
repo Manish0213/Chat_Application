@@ -8,7 +8,7 @@ const port = 5000;
 const connectToDatabase = require("./db");
 
 app.use(cors({
-  origin: ['http://localhost:3000','https://chat-application-seven-rho.vercel.app'], 
+  origin: ['http://localhost:3000','https://venerable-beijinho-a40570.netlify.app'], 
   methods: ['GET','PUT','POST','DELETE'],
   credentials: true,
 }));
