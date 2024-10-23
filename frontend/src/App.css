@@ -160,6 +160,7 @@ body {
 
 .navbar ul li {
   margin-left: 20px;
+  color: white;
 }
 
 .navbar ul li a {
@@ -174,4 +175,29 @@ body {
 .logo {
   height: 40px;
   width: 40px;
+}
+
+/* login form design */
+
+.email-input,
+.password-input {
+  width: 80%;
+  padding: 12px 20px; /* Padding ko horizontal side par thoda zyada kiya for better feel */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc; /* Light border for a subtle look */
+  border-radius: 8px; 
+  font-size: 16px; /* Comfortable font size */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #9d7def, #7a58e5);
+  border: none;
+  border-radius: 8px;
+  color: black; 
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
