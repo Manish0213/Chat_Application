@@ -24,7 +24,12 @@ function App() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser) {
   
-      const newSocket = io(process.env.REACT_APP_API_URL); // Backend URL
+      const newSocket = io(process.env.REACT_APP_API_URL,{
+        path: '/socket',
+        reconnection: true,
+        transports: ['websocket', 'polling'],
+        reconnectionAttempts: 5,
+      }); // Backend URL
       setSocket(newSocket);
   
       newSocket.on("connect", () => {
