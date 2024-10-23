@@ -33,17 +33,17 @@ const Login = ({setToken}) => {
   }
 
   return (
-    <div className='container my-3'>
+    <div className='form-container'>
       <form onSubmit={handleSubmit} >
     <div className="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={formData.email} onChange={handleChange}/>
+      <input type="email" className="" id="exampleInputEmail1" placeholder="Enter email" name="email" value={formData.email} onChange={handleChange}/>
     </div>
     <div className="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name="password" value={formData.password} onChange={handleChange}/>
+      <input type="password" className="" id="exampleInputPassword1" placeholder="Password" name="password" value={formData.password} onChange={handleChange}/>
     </div>
-    <button type="submit" className="btn btn-primary my-3">Submit</button>
+    <button type="submit">Submit</button>
   </form>
     </div>
   )
