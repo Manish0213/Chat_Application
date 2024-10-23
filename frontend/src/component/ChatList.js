@@ -7,7 +7,7 @@ const ChatList = ({ chat, socket, fetchChatList }) => {
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-    if (loggedInUser) {
+    if (socket) {
       const userId = loggedInUser._id;
 
       socket.emit("registerUser", userId);
