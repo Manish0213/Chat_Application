@@ -4,11 +4,15 @@ const Chat = require("../models/ChatModel");
 
 const setupSocket = (server) => {
   const io = socketIo(server, {
+    path: '/socket',
+    wssEngine: ['ws','wss'],
+    transports: ['websocket','polling'],
     cors: {
       origin: "https://chatapp-nine-gray.vercel.app",
       methods: ["GET", "POST"],
       allowedHeaders: ["Content-Type"],
     },
+    allowEIO3: true,
   });
 
   io.on("connection", (socket) => {
