@@ -25,7 +25,7 @@ function App() {
     if (loggedInUser) {
   
       const newSocket = io(process.env.REACT_APP_API_URL, {
-        transports: ['websocket']
+        transports: ['websocket', 'polling']
       }); // Backend URL
       setSocket(newSocket);
   
