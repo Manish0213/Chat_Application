@@ -24,7 +24,7 @@ function App() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser) {
   
-      const newSocket = io(process.env.REACT_APP_API_URL, {
+      const newSocket = io(`wss://chat-application-gxw2.onrender.com`, {
         transports: ['websocket', 'polling']
       }); // Backend URL
       setSocket(newSocket);
