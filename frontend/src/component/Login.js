@@ -46,7 +46,6 @@ const Login = ({setToken}) => {
     <button type="submit" className="btn btn-primary my-3">Submit</button>
   </form>
     </div>
-    
   )
 }
 
