@@ -23,7 +23,7 @@ router.post("/signup", async(req, res) => {
     }
   };
   const authToken = jwt.sign(payload,SECRET_KEY);
-  res.status(200).json({success: true, authToken});
+  res.status(200).json({success: true, authToken, user});
 });
 
 router.post("/login", async (req, res) => {
