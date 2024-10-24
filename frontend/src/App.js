@@ -7,6 +7,7 @@ import UserList from "./component/UserList";
 import Navbar from "./component/Navbar";
 import ChatBoard from "./component/ChatBoard";
 import { io } from "socket.io-client";
+import Signup from "./component/Signup";
 
 function App() {
   const [chat, setChat] = useState([]);
@@ -65,6 +66,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ChatContainer chat={chat} socket={socket} fetchChatList={fetchChatList} />} />
         <Route path="/login" element={<Login setToken={setToken} />} />
+        <Route path="/signup" element={<Signup setToken={setToken}/>} />
         <Route path="/userlist" element={<UserList />} />
         <Route path="/chat/:chatId" element={<ChatBoard socket={socket} />} />
       </Routes>
