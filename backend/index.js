@@ -13,13 +13,13 @@ const connectToDatabase = require("./db");
 //   credentials: true,
 // }));
 
-// app.use(cors({
-//   origin: 'https://chatapp-nine-gray.vercel.app',
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   credentials: true // If you're using cookies
-// }));
+app.use(cors({
+  origin: 'https://chatapp-nine-gray.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // If you're using cookies
+}));
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 
 connectToDatabase();
