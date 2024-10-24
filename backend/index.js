@@ -25,7 +25,7 @@ app.use(express.json());
 connectToDatabase();
 
 app.get("/", (req, res) => {
-  res.send("Hello Vercel okay");
+  res.send("Hello Vercel bhai");
 });
 
 // Routes
