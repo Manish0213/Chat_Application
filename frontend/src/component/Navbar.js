@@ -23,7 +23,7 @@ const Navbar = () => {
         <li>
           <Link to="/">Chats</Link>
         </li>
-        <li onClick={handleLogout}>Logout</li>
+        {localStorage.getItem("token") ? <li onClick={handleLogout}>Logout</li>: ""}
       </ul>
     </nav>
   );
