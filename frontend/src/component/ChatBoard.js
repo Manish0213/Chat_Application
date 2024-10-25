@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Messages from "./Messages";
+import notificationSound from '../sounds/sound1.mp3';
 
 const ChatBoard = ({socket}) => {
   const { chatId } = useParams();
@@ -38,6 +39,12 @@ const ChatBoard = ({socket}) => {
       // Listen for new messages
       socket.on('receiveMessage', (msg) => {
         setMessages((prev) => [...prev, msg]);
+
+        // Check if the message is from another user
+        const loggedInUserId = JSON.parse(localStorage.getItem("loggedInUser"))._id;
+        if (msg.sender_id._id !== loggedInUserId) {
+          new Audio(notificationSound).play();
+        }
       });
     }
 

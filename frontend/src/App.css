@@ -52,6 +52,7 @@ body {
 .messages {
   flex-grow: 1;
   overflow-y: auto;
+  padding-bottom: 10px; /* Add space for input area */
 }
 
 .message {
@@ -72,6 +73,8 @@ body {
 }
 
 .message-input-container {
+  position: sticky;
+  bottom: 0;
   display: flex;
   align-items: center;
   padding-top: 10px;
