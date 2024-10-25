@@ -15,8 +15,7 @@ body {
 .chatlist-container h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  /* padding-top: 30px;   */
-  /* nav ki position fixed krne ke baad paading top deni pdi*/
+  padding-top: 30px;   /* nav ki position fixed krne ke baad paading top deni pdi*/
 }
 
 .chatlist-container ul {
@@ -49,8 +48,7 @@ body {
 .chatboard-container h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  /* padding-top: 70px;  */
-  /* nav ki position fixed krne ke baad paading top deni pdi*/
+  padding-top: 70px;   /* nav ki position fixed krne ke baad paading top deni pdi*/
 }
 
 .messages {
@@ -120,6 +118,7 @@ body {
   max-width: 300px;
   margin: 20px auto;
   background-color: #f9f9f9;
+  margin-top: 90px;  /* navbar ko position fixed krne se margin top deni pdi*/
 }
 
 .userlist-container h2 {
@@ -152,10 +151,11 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  /* position: fixed;
-  top: 0; 
-  left: 0;
-  right: 0; */
+  position: fixed;
+  top: 5px;  /* top left right se 0px ki jagah 5px dena pda kyoki position fixed dene se default spacing ht gyi */
+  left: 5px;
+  right: 5px;
+  border-radius: 8px;
 }
 
 .navbar h2 {
@@ -190,6 +190,10 @@ body {
 }
 
 /* login form design */
+
+.form-container h2{
+  padding-top: 70px;
+}
 
 .email-input,
 .password-input {

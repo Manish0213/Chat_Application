@@ -40,7 +40,7 @@ const Signup = ({setToken}) => {
   };
 
   return (
-    <div className="container my-2">
+    <div className="form-container">
         <h2>Create Your Account</h2>
       <form onSubmit={(event) => handleSubmit(event)}>
         <div className="form-group">
